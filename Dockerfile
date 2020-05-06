@@ -1,8 +1,9 @@
+#Ensure you have the compiled file in the target directory
+
 FROM openjdk:8-jre-alpine
 
-EXPOSE 7000
-ENTRYPOINT ["/usr/bin/java", "-jar", "/usr/share/javalin/my-javalin.jar"]
+RUN mkdir MaryPoppins
+COPY ./target/MaryPoppins-1.0-SNAPSHOT-shaded.jar MaryPoppins
 
-# Add the service itself
-ARG JAR_FILE
-ADD target/${JAR_FILE} /usr/share/javalin/my-javalin.jar
+EXPOSE 7000
+ENTRYPOINT ["/usr/bin/java", "-jar", "MaryPoppins/MaryPoppins-1.0-SNAPSHOT-shaded.jar"]
