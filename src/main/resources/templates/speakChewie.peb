@@ -1,0 +1,5 @@
+{% extends "./lib/base.peb" %}
+
+{% block content %}
+	<h1>That's not even a language!</h1>
+{% endblock %}

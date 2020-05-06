@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+    <title>{% block title %}I'm Mary Poppins Y'All!{% endblock %}</title>
+  </head>
+  <body>
+    <div id="content">
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
