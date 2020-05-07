@@ -47,7 +47,7 @@ You can then push the docker image as follows:
 
 ```heroku container:push web --app={app name created in heroku}```
 
-Once that it successful, you can then release the aoo like so:
+Once that it successful, you can then release the app like so:
 
 ```heroku container:release web --app={app name created in heroku}```
 
