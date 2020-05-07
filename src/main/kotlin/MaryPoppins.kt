@@ -1,4 +1,5 @@
 import io.javalin.Javalin
+import models.Wrestler
 import org.slf4j.LoggerFactory
 
 fun main(){
@@ -15,7 +16,8 @@ fun main(){
 
     app.routes {
         app.get("/") { ctx ->
-            ctx.render("templates/index.peb", mapOf("message" to "I'm Mary Poppins Y'All!"))
+            val mary = Wrestler("Mary Poppins", 40, "Swanton Bomb")
+            ctx.render("templates/index.peb", mapOf("message" to mary.yell()))
         }
         app.get("/speak-chewie") { ctx -> ctx.render("templates/speakChewie.peb") }
         app.get("/textie") { ctx -> ctx.result("I'm Mary Poppins Y'All!") }
